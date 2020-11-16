@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="poker-cards.svg">
+    <title>Spider Solitare Express</title>
+</head>
+<body>
+   <div id="loader" class="lds-ring"><div></div><div></div><div></div><div></div></div>
+   <div id="maindiv">
+    <div id='header'>
+        <h1 id="mainheader">Spider Solitare Express</h1>
+        <p>Calssic tabletop solitrae game which one can play by oneself.</p>
+    </div>
+    <div id='buttons'>
+        <button class='startbutton' id='gamebutton'>Start new game</button>
+        <button class='startbutton' id='howtobutton'>How to play?</button>
+        <button class='startbutton' id='aboutbutton'>About</button>
+    </div>
+    </div>
+    <div id="gamediv" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div id='topcontainer'  ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div id='drawcards'></div>
+        <div id='wincards'></div>
+        </div>
+        <div id='playcards'  ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    </div>
+    <div id="howtoplaydiv">
+       <img src="clear.svg" id='cancelbutton'>
+        <h1 class='title'>How to play</h1>
+        <div id="pardiv">
+        <p class="par">The object of the game is to expose all cards and move them to the foundation piles by assembling cards of the same suit in complete runs from King to Ace within the columns of the tableau. Once a complete run is made, the cards in that run are automatically moved to the foundation piles. When all completed runs have been moved from the tableau to the foundation piles, the game is won.</p>
+
+        <p class="par">During game play, cards facing up may be moved between the columns of the tableau by building runs of cards downward in decreasing rank, for example:  4-3-2-A , 10-9-8-7-6, K-Q-J, etc. When building runs in the tableau, cards may be moved individually or in groups, and any suit can be placed on top of any other suit. However, only runs of cards that are in proper decreasing rank order and of the same suit may be moved together as a group. An empty column may be filled by any card or run of cards that are eligible to be moved.</p>
+
+        <p class="par">Cards from the stock are dealt by tapping the stacks of cards representing the stock. Cards from the stock are dealt in sets of 10, one card to each column of the tableau. Cards may be dealt from the stock at any time as long as all of the tableau columns contain at least one card.</p>
+        </div>
+    </div>
+    <div id='aboutdiv'>
+       <img src="clear.svg" id='aboutcancelbutton'>
+        <h1 class='title'>About</h1>
+        <p class="par">A classic spider solitare game with four suits. The game is made with HTML5, CSS and pure JavaScript. Game utilizes HTML5's Drag and Drop API. Due to this, the game might act differently depending on the browser and is NOT playable on mobile devices. The "Deck of Cards API" is used to generate all the cards, images and their values. All the rules of the game are explained in "How to play" tab. Window animations and transitions are from animate.css library. Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> and <a href="https://www.flaticon.com/authors/those-icons" title="Those Icons">Those Icons</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p>
+    </div>
+    <div id="winmessage">
+        <h1>CONGRATULATIONS, YOU WON THE GAME!</h1>
+    </div>
+<script src="app.js"></script>
+</body>
+</html>

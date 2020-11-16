@@ -1,0 +1,252 @@
+*{
+    font-family: 'Hind Siliguri', sans-serif;
+}
+body{
+    background: #fefefe;
+}
+#header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: 1.7em;
+    
+}
+#buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.startbutton{
+    width: 20%;
+    height: 50px;;
+    margin-top: 2%;
+    border-radius: 10px;
+    font-size: 1.3em;
+    border: none;
+    background: #e0e1e0
+}
+.startbutton:hover{
+    cursor: pointer;
+}
+#gamediv{
+    background-color: #396E31;
+    height: 100vh;
+    width: 100vw;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#topcontainer{
+    display: flex;
+    justify-content: space-around;
+}
+#drawcards{
+    width: 170px;
+    height: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+#playcards{
+    height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#wincards{
+    margin-top: 50px;
+    height: 240px;
+    display: flex;
+    align-items: center;
+}
+#cardDrawingPlace{
+    width: 140px;
+    height: 200px;
+    border: 3px solid lightgray;
+    border-radius: 10px;
+}
+.winstack{
+    background-color: crimson;
+    height: 200px;
+    width: 140px;
+    margin-right: 10px;
+    border: 3px solid lightgray;
+    border-radius: 10px;
+}
+.playstack{
+    height: 200px;
+    width: 140px;
+    margin-right: 10px;
+    border: 3px solid lightgray;
+    border-radius: 10px;
+    margin-top: 50px;
+    
+}
+.card{
+    width: 140px;
+    height: 200px;
+    margin-top: 5px;
+    position: absolute;
+}
+.drawACard{
+    width: 140px;
+    height: 200px;
+    margin-top: 5px;
+    position: absolute;
+}
+.bigDraw{
+    width: 140px;
+    height: 200px;
+    margin-top: 5px;
+    position: absolute;
+}
+#holder{
+    width: 143px;
+}
+#dragimages{
+    width: 140px;
+    position: absolute;
+    top: 0;
+    left: -500px;
+    height: 100px;
+}
+.indragimagecontiner{
+    width: 140px;
+    height: 200px;
+}
+#howtoplaydiv{
+    width: 50%;
+    height: 65%;
+    background-color: #f6f5f5;
+    display: none;
+    position: absolute;
+    top: 0;
+    flex-direction: column;
+    margin-left: 25%;
+    margin-top: 5%;
+    border-radius: 50px;
+    box-shadow:  28px 28px 55px #d9d9d9, 
+             -28px -28px 55px #ffffff;
+    }
+#cancelbutton{
+    width: 30px;
+    height: 30px;
+    align-self: flex-end;
+    margin-right: 30px;
+    margin-top: 30px;
+    transition: transform 0.3s;
+}
+#cancelbutton:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+#aboutcancelbutton{
+     width: 30px;
+    height: 30px;
+    align-self: flex-end;
+    margin-right: 30px;
+    margin-top: 30px;
+    transition: transform 0.3s;
+}
+#aboutcancelbutton:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+#aboutdiv{
+    width: 50%;
+    height: 65%;
+    background-color: #f6f5f5;
+    display: none;
+    position: absolute;
+    top: 0;
+    flex-direction: column;
+    overflow: auto;
+    margin-left: 25%;
+    margin-top: 5%;
+    border-radius: 50px;
+    box-shadow:  28px 28px 55px #d9d9d9, 
+             -28px -28px 55px #ffffff;
+}
+.par{
+    align-self: center;
+    width: 60%;
+    font-size: 1.4em;
+    line-height: 1.6em;
+}
+.title{
+    align-self: center;
+    margin-bottom: 4%;
+    border-bottom: 2px solid gray;
+    font-size: 3em;
+}
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  margin: 8px;
+  border: 12px solid red;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: red transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#loader{
+    visibility: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+    position: relative;
+}
+#maindiv{
+    position: absolute;
+    top: 0;
+    width: 99%;
+
+}
+#winmessage{
+    display: none;
+    width: 100%;
+    text-align: center;
+}
+#pardiv{
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    width: 80%;
+    align-self: center; 
+    margin-left: 3%;
+}
+#mainheader{
+    border-bottom: 3px solid #d9d9d9;
+    padding-bottom: 10px;
+}
