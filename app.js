@@ -424,6 +424,9 @@ function checkWin(){
         endStacks[currentWinstack] = true
         currentWinstack = currentWinstack - 1
         tableStacks[pushTo][0].splice(0, 13)
+        for(let i = 13; i <0 ; i--){
+            document.getElementById('playcards').children.item(pushTo).children.item(i).remove
+        }
         //check if all endstacks are true => launch win function
         function checkIfTrue(item){
             return item == true
